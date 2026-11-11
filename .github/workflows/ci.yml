@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Droits minimaux : la CI lit le code, elle n'écrit rien.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    name: Tests (analyse, tables agrégées, tableau de bord)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - name: Aucune donnée brute dans le dépôt
+        run: |
+          ! git ls-files | grep -E '(^|/)creditcard\.csv$'
+          ! git ls-files | grep -E '\.(parquet|gz)$'
+      - name: Lancer les tests
+        run: python -m pytest -q

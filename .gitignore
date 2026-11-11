@@ -1,0 +1,16 @@
+# Données brutes : jamais publiées (licence non confirmée, transactions individuelles)
+data/creditcard.csv
+data/*.csv
+data/*.gz
+# Sorties ligne à ligne éventuelles : seules les tables agrégées de reports/ sont suivies
+.venv/
+.venv312/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+.env
+.DS_Store
+.venv-demo/

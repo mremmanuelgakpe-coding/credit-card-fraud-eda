@@ -1,0 +1,32 @@
+[theme]
+base = "light"
+primaryColor = "#11865D"
+backgroundColor = "#F4F4F5"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#17191F"
+font = "Montserrat, sans-serif"
+headingFont = "Montserrat, sans-serif"
+baseFontSize = 16
+
+[[theme.fontFaces]]
+family = "Montserrat"
+url = "app/static/fonts/montserrat-latin-wght-normal.woff2"
+weight = "100 900"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Montserrat"
+url = "app/static/fonts/montserrat-latin-wght-italic.woff2"
+weight = "100 900"
+style = "italic"
+
+[server]
+headless = true
+enableStaticServing = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "viewer"
+showErrorDetails = false

@@ -1,0 +1,30 @@
+{
+  "source_sha256": "76274b691b16a6c49d3f159c883398e03ccd6d1ee12d9d8ee38f4b4b98551a89",
+  "rows": 284807,
+  "columns": 31,
+  "frauds": 492,
+  "amount": 25162590.01,
+  "fraud_amount": 60127.97,
+  "median_amount_normal": 22.0,
+  "median_amount_fraud": 9.25,
+  "amount_quantiles": {
+    "0": {
+      "0.25": 5.65,
+      "0.5": 22.0,
+      "0.75": 77.05
+    },
+    "1": {
+      "0.25": 1.0,
+      "0.5": 9.25,
+      "0.75": 105.89
+    }
+  },
+  "missing_values": 0,
+  "duplicate_rows": 1081,
+  "duplicate_frauds": 19,
+  "time_max_seconds": 172792.0,
+  "cube_cells": 382,
+  "k_min": 5,
+  "grouped_transactions": 10,
+  "significant_variables_ks_bh": 29
+}
